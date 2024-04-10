@@ -1,6 +1,7 @@
 # Modulos empleados en el desarrollo del programa
 import cv2
 import mediapipe as mp
+from mediapipe.python.solutions import drawing_styles as styles
 import numpy as np
 
 def centro_de_la_palma(lista_coordenadas):
@@ -30,11 +31,11 @@ def calcular_angulo_pulgar(coordenadas_pulgar):
 
 def definir_colores():
      colores=dict()
-     colores['Pulgar'] = (0, 151, 229)       #Naranja
-     colores['Indice'] = (202, 204, 1)       #Celeste
-     colores['Medio'] = (0, 204, 255)        #Amarillo
-     colores['Anular'] = (48, 255, 48)       #Verde
-     colores['Menique'] = (192, 101, 21)     #Azul
+     colores['Pulgar'] = styles._PEACH
+     colores['Indice'] = styles._PURPLE
+     colores['Medio'] = styles._YELLOW
+     colores['Anular'] = styles._GREEN
+     colores['Menique'] = styles._BLUE
      return colores
 
 
